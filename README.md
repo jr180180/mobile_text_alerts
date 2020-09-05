@@ -38,6 +38,7 @@ The following examples assume that you've instantiated your MTA client.
 ```ruby
 client = MobileTextAlerts.new
 ```
+**Note:** If you don't see what you're looking for below, please browse the files in the `lib/actions` directory as each method is well documented. Alternatively, check out the [Ruby Docs](https://www.rubydoc.info/github/jr180180/mobile_text_alerts/).
 
 ### SMS Messages
 
@@ -127,7 +128,6 @@ client.delete_member_via_email(email)
 ### Todos
 
 - Expand on the usage examples above
-    - *If you don't see what you're looking for above, please browse the files in the `lib/actions` directory as each method is well documented.*
 - Add actions for the following API endpoints:
     - lulacash
     - send_2fa
