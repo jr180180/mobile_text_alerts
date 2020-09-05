@@ -8,6 +8,7 @@ require 'mobile_text_alerts/actions/sms'
 require 'mobile_text_alerts/actions/mms'
 require 'mobile_text_alerts/actions/tts'
 require 'mobile_text_alerts/actions/member'
+require 'mobile_text_alerts/actions/group'
 
 module MobileTextAlerts
   class Client
@@ -17,6 +18,7 @@ module MobileTextAlerts
     include MobileTextAlerts::Actions::Mms
     include MobileTextAlerts::Actions::Tts
     include MobileTextAlerts::Actions::Member
+    include MobileTextAlerts::Actions::Group
 
     attr_reader :api_key, :base_uri
 

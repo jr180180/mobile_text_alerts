@@ -14,9 +14,9 @@ module MobileTextAlerts
       # Otherwise, it returns the response hash
       # @param [Hash] response
       def raise_error_on(response)
-        if response['error']
+        if response.is_a?(Hash) && response['error']
           raise Error.new(response['error'])
-        elsif response['failed_numbers']
+        elsif response.is_a?(Hash) && response['failed_numbers']
           message = response['failed_numbers']
           # may be an array?
           message = message.is_a?(String) ? message : message.join(', ')
