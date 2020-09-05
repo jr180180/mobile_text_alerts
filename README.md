@@ -99,6 +99,31 @@ If you would like to send the message to all of your subscribers, use `'all'` as
 client.send_tts_to_group('1112223333', 'foo bar')
 ```
 
+### Adding contacts/members to your account
+
+Pass in a hash of the contacts information. You must provide at the very least, the phone number or email address of the contact.
+
+```ruby
+contact_info = {
+    phone_number: phone_number,
+    email:        email,
+    first_name:   'Foo',
+    last_name:    'Bar',
+    groups:       ['11111']
+}
+client.add_member(contact_info)
+```
+
+### Delete contacts/members from your account
+
+You must pass either the phone number or email address of the contact in your account.
+
+```ruby
+client.delete_member_via_number(phone_number)
+# OR
+client.delete_member_via_email(email)
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
