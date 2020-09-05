@@ -2,8 +2,6 @@ module MobileTextAlerts
   module Actions
     module Group
 
-      # Todo - add specs for below actions
-
       # Add a group to your account.
       # @param [String] name
       # @param [String] keyword
