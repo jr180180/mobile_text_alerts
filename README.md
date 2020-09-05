@@ -124,6 +124,15 @@ client.delete_member_via_number(phone_number)
 client.delete_member_via_email(email)
 ```
 
+### Todos
+
+- Expand on the usage examples above
+    - *If you don't see what you're looking for above, please browse the files in the `lib/actions` directory as each method is well documented.*
+- Add actions for the following API endpoints:
+    - lulacash
+    - send_2fa
+    - check_2fa
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
@@ -141,3 +150,9 @@ The gem is available as open source under the terms of the [MIT License](https:/
 ## Code of Conduct
 
 Everyone interacting in the MobileTextAlerts project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/jr180180/mobile_text_alerts/blob/master/CODE_OF_CONDUCT.md).
+
+## Support Development
+
+If you're interested in supporting the development of this gem, please consider [signing up for Mobile-Text-Alerts.com through our referral link](https://mobile-text-alerts.com/a/1018713).
+
+Development sponsored by [Passion Cafe](http://passion.cafe)
