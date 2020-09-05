@@ -26,6 +26,14 @@ module MobileTextAlerts
         response.kind_of?(Hash) ? response : JSON.parse(response)
       end
 
+      def send_request!(uri)
+        response = HTTParty.get(uri)
+        response = Utils.parse_response(response)
+        Utils.raise_error_on(response)
+
+        response
+      end
+
     end
 
   end

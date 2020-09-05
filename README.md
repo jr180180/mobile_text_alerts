@@ -33,11 +33,50 @@ Of course, replace `YOUR_API_KEY` with your Mobile Text Alerts API key from your
 
 ## Usage
 
-### Sending SMS messages to a phone number
+The following examples assume that you've instantiated your MTA client.
 
 ```ruby
 client = MobileTextAlerts.new
+```
+
+### SMS Messages
+
+#### Sending SMS messages to a phone number
+
+Pass in the phone number and the message.
+
+```ruby
 client.send_sms_to_number('1112223333', 'foo bar')
+```
+
+#### Sending SMS messages to a MTA group
+
+Pass in the group id from MTA and the message.
+
+If you would like to send the message to all of your subscribers, use `'all'` as the group_id parameter.
+
+```ruby
+client.send_sms_to_group('1', 'foo bar')
+```
+
+### MMS Messages
+
+#### Sending MMS messages to a phone number
+
+Pass in the phone number, the message, and the url to the image file.
+
+```ruby
+client.send_mms_to_number('1112223333', 'foo bar', 'https://foo.bar/image.png')
+```
+
+#### Sending MMS messages to a MTA group
+
+Pass in the group id from MTA, the message, and the image url.
+
+If you would like to send the message to all of your subscribers, use `'all'` as the group_id parameter.
+
+```ruby
+client.send_mms_to_group('1112223333', 'foo bar', 'https://foo.bar/image.png')
 ```
 
 ## Development

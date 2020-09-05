@@ -5,12 +5,14 @@ require 'mobile_text_alerts/version'
 require 'mobile_text_alerts/client'
 require 'mobile_text_alerts/utils'
 require 'mobile_text_alerts/actions/sms'
+require 'mobile_text_alerts/actions/mms'
 
 module MobileTextAlerts
   class Client
     include HTTParty
     include MobileTextAlerts::Utils
     include MobileTextAlerts::Actions::Sms
+    include MobileTextAlerts::Actions::Mms
 
     attr_reader :api_key, :base_uri
 

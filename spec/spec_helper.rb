@@ -14,8 +14,8 @@ RSpec.configure do |config|
   end
 end
 
-def mta_client_url
-  /https:\/\/mobile-text-alerts.com\/rest\/\?key=foo.*/
+def mta_client_url(request_type)
+  /https:\/\/mobile-text-alerts.com\/rest\/\?.*key=foo.*request=#{request_type}/
 end
 
 def fixture(filename)

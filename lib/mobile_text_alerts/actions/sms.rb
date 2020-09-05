@@ -11,12 +11,19 @@ module MobileTextAlerts
         uri = base_uri + 'send_message'
         uri += "&number=#{phone_number}"
         uri += "&message=#{message}"
+        Utils.send_request!(uri)
+      end
 
-        response = HTTParty.get(uri)
-        response = Utils.parse_response(response)
-        Utils.raise_error_on(response)
-
-        response
+      # Allows you to send SMS messages to a group of recipients or all subscribers.
+      # Pass in 'all' as the the `group_id` to send to all of your subscribers.
+      # @param [String] group_id
+      # @param [String] message
+      # @return [Hash]
+      def send_sms_to_group(group_id, message)
+        uri = base_uri + 'send_message'
+        uri += "&group_id=#{group_id}"
+        uri += "&message=#{message}"
+        Utils.send_request!(uri)
       end
 
     end
