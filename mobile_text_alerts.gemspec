@@ -4,7 +4,7 @@ Gem::Specification.new do |spec|
   spec.name          = 'mobile_text_alerts'
   spec.version       = MobileTextAlerts::VERSION
   spec.authors       = ['John Sanchez']
-  spec.email         = ['john@passion.cafe']
+  spec.email         = ['jr180180@gmail.com']
 
   spec.summary       = 'Ruby wrapper for the Mobile-Text-Alerts.com API'
   spec.homepage      = 'https://github.com/jr180180'
