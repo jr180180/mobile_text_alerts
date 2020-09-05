@@ -79,6 +79,26 @@ If you would like to send the message to all of your subscribers, use `'all'` as
 client.send_mms_to_group('1112223333', 'foo bar', 'https://foo.bar/image.png')
 ```
 
+### TTS Messages
+
+#### Sending TTS messages to a phone number
+
+Pass in the phone number, the message, and the url to the image file.
+
+```ruby
+client.send_tts_to_number('1112223333', 'foo bar')
+```
+
+#### Sending TTS messages to a MTA group
+
+Pass in the group id from MTA, the message, and the image url.
+
+If you would like to send the message to all of your subscribers, use `'all'` as the group_id parameter.
+
+```ruby
+client.send_tts_to_group('1112223333', 'foo bar')
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.

@@ -16,6 +16,11 @@ module MobileTextAlerts
       def raise_error_on(response)
         if response['error']
           raise Error.new(response['error'])
+        elsif response['failed_numbers']
+          message = response['failed_numbers']
+          # may be an array?
+          message = message.is_a?(String) ? message : message.join(', ')
+          raise Error.new(message)
         else
           response
         end
