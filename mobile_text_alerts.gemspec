@@ -24,8 +24,8 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'httparty', '~> 0.18.1'
-  spec.add_dependency 'json', '~> 2.3', '>= 2.3.1'
+  spec.add_dependency 'httparty', '~> 0.20.0'
+  spec.add_dependency 'json', '~> 2.6', '>= 2.6.1'
 
   spec.add_development_dependency 'rspec'
   spec.add_development_dependency 'webmock'
